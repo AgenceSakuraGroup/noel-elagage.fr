@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Les Artisans du Vert — Spécialistes de l'élagage, abattage et taille d'arbres dans le Rhône (69). Devis gratuit sous 24h. Intervention à Meyzieu et dans tout le Rhône.">
+<meta name="keywords" content="élagage Meyzieu, élagage Rhône 69, abattage arbres Lyon, taille haies Meyzieu, élagueur professionnel Rhône, rognage souches 69, espaces verts Meyzieu, Les Artisans du Vert">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Les Artisans du Vert | Élagage & Abattage — Rhône 69">
+<meta property="og:description" content="Spécialistes de l'élagage, abattage et taille d'arbres dans le Rhône (69). Devis gratuit sous 24h.">
+<meta property="og:image" content="hero.png">
+<meta property="og:type" content="website">
+<title>Les Artisans du Vert | Élagage & Abattage — Rhône 69</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--g:#00E676;--bg:#060F07;--bg2:#0A1A0C;--bg3:#0F2411;--w:#F0F5E8;--wm:rgba(240,245,232,0.75);--ws:rgba(240,245,232,0.25);--gold:#C9A84C}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--w);overflow-x:hidden;cursor:none}
+@media(max-width:768px){body{cursor:auto}}
+#cur,#cur2{position:fixed;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%)}
+#cur{width:10px;height:10px;background:var(--g);transition:transform 0.1s;mix-blend-mode:difference}
+#cur2{width:36px;height:36px;border:1.5px solid var(--g);transition:all 0.15s ease;opacity:0.55}
+@media(max-width:768px){#cur,#cur2{display:none}}
+#particles{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.p{position:absolute;border-radius:50%;background:var(--g);opacity:0;animation:float linear infinite}
+@keyframes float{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:0.12}90%{opacity:0.06}100%{transform:translateY(-5vh) scale(1);opacity:0}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.3rem 4rem;background:rgba(6,15,7,0.88);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,230,118,0.08);transition:padding 0.3s}
+nav.scrolled{padding:0.9rem 4rem}
+.nav-logo{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800;color:var(--w);text-decoration:none}
+.nav-logo span{color:var(--g)}
+.nav-links{display:flex;gap:2.2rem;list-style:none}
+.nav-links a{color:var(--w);font-size:13px;font-weight:500;text-decoration:none;transition:color 0.2s;cursor:none}
+.nav-links a:hover{color:var(--g)}
+.nav-cta{background:var(--g);color:#060F07;font-weight:700;font-size:13px;padding:0.65rem 1.5rem;border-radius:100px;border:none;cursor:none;font-family:'Inter',sans-serif;transition:all 0.2s}
+.nav-cta:hover{background:var(--w);transform:scale(1.05)}
+.nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-burger span{display:block;width:24px;height:2px;background:var(--w);border-radius:2px;transition:all 0.3s}
+.nav-mobile{display:none;position:fixed;inset:0;background:var(--bg);z-index:490;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--w);text-decoration:none;transition:color 0.2s}
+.nav-mobile a:hover{color:var(--g)}
+.nav-mobile .nm-cta{background:var(--g);color:#060F07;padding:1rem 3rem;border-radius:100px;font-family:'Inter',sans-serif;font-weight:700;font-size:1rem}
+
+/* HERO */
+.hero{min-height:100vh;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:0 4rem 5rem}
+.hero-img{position:absolute;inset:0;z-index:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.hero-overlay-top{position:absolute;top:0;left:0;right:0;height:45%;background:linear-gradient(to bottom,rgba(6,15,7,0.75) 0%,transparent 100%);z-index:1}
+.hero-overlay-bottom{position:absolute;bottom:0;left:0;right:0;height:75%;background:linear-gradient(to top,rgba(6,15,7,1) 0%,rgba(6,15,7,0.97) 30%,rgba(6,15,7,0.6) 60%,transparent 100%);z-index:1}
+.hero-content{position:relative;z-index:10;padding-top:110px}
+.glowdot{display:inline-block;width:7px;height:7px;background:var(--g);border-radius:50%;animation:blink 2s infinite;flex-shrink:0}
+@keyframes blink{0%,100%{opacity:1;box-shadow:0 0 8px var(--g)}50%{opacity:0.3;box-shadow:none}}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--g);margin-bottom:2rem;opacity:0;animation:fadeUp 0.6s 0.1s forwards}
+.hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--g)}
+.hero h1{font-family:'Syne',sans-serif;font-size:clamp(3rem,8vw,7.5rem);font-weight:800;line-height:1.05;letter-spacing:-2px;margin-bottom:2rem}
+.hero h1 .line1{display:block;color:var(--w);opacity:0;animation:slideInLeft 0.7s 0.3s cubic-bezier(0.25,0.46,0.45,0.94) forwards}
+.hero h1 .line2{display:block;color:var(--g);opacity:0;animation:slideInLeft 0.7s 0.5s cubic-bezier(0.25,0.46,0.45,0.94) forwards}
+.hero h1 .line3{display:block;color:var(--w);opacity:0;animation:slideInLeft 0.7s 0.7s cubic-bezier(0.25,0.46,0.45,0.94) forwards}
+.hero h1 .line4{display:block;color:var(--w);opacity:0;animation:slideInLeft 0.7s 0.9s cubic-bezier(0.25,0.46,0.45,0.94) forwards}
+@keyframes slideInLeft{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:translateX(0)}}
+.hero-sub{font-size:16px;color:var(--w);line-height:1.8;max-width:520px;margin-bottom:3rem;opacity:0;animation:fadeUp 0.8s 1.1s forwards}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:4rem;opacity:0;animation:fadeUp 0.8s 1.3s forwards}
+.btn-g{background:var(--g);color:#060F07;font-weight:700;font-size:14px;padding:1rem 2.2rem;border-radius:100px;border:none;cursor:none;font-family:'Inter',sans-serif;display:inline-flex;align-items:center;gap:8px;transition:all 0.25s;text-decoration:none}
+.btn-g:hover{background:var(--w);transform:translateY(-3px)}
+.btn-o{background:transparent;color:var(--w);font-weight:600;font-size:14px;padding:1rem 2.2rem;border-radius:100px;border:1px solid rgba(240,245,232,0.35);cursor:none;font-family:'Inter',sans-serif;display:inline-flex;align-items:center;gap:8px;transition:all 0.25s;text-decoration:none}
+.btn-o:hover{border-color:var(--g);color:var(--g);transform:translateY(-3px)}
+.hero-stats{display:flex;gap:3rem;flex-wrap:wrap;border-top:1px solid rgba(0,230,118,0.15);padding-top:2rem;opacity:0;animation:fadeUp 0.8s 1.5s forwards}
+.stat-n{font-family:'Syne',sans-serif;font-size:2.6rem;font-weight:800;color:var(--g);line-height:1}
+.stat-l{font-size:12px;color:var(--w);margin-top:4px;font-weight:500}
+.scroll-hint{position:absolute;right:3rem;bottom:3rem;z-index:10;display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0;animation:fadeUp 1s 1.8s forwards}
+.scroll-line{width:1px;height:50px;background:linear-gradient(to bottom,transparent,var(--g));animation:sanim 2s ease-in-out infinite}
+@keyframes sanim{0%,100%{opacity:0.4}50%{opacity:1}}
+.scroll-text{font-size:9px;color:rgba(0,230,118,0.7);letter-spacing:3px;text-transform:uppercase;font-weight:600;writing-mode:vertical-rl}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* MARQUEE */
+.marquee-wrap{background:var(--g);overflow:hidden;padding:0.95rem 0;white-space:nowrap}
+.marquee-track{display:inline-block;animation:marquee 18s linear infinite}
+.marquee-track span{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:800;color:#060F07;letter-spacing:0.5px;text-transform:uppercase;padding:0 2.5rem}
+.marquee-track span::after{content:'✦';padding-left:2.5rem;opacity:0.45}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* SECTIONS */
+.section{padding:7rem 4rem}
+.s-eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--g);margin-bottom:1.2rem;display:flex;align-items:center;gap:10px}
+.s-eyebrow::before{content:'';width:22px;height:1px;background:var(--g)}
+.s-title{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.6rem);font-weight:800;color:var(--w);line-height:1.1;letter-spacing:-1px;margin-bottom:3.5rem}
+.s-title em{font-style:normal;color:var(--g)}
+
+/* SERVICE CARDS */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.svc-card{position:relative;border-radius:20px;overflow:hidden;height:420px;cursor:none;border:1px solid rgba(0,230,118,0.1);transition:transform 0.35s,border-color 0.3s}
+.svc-card:hover{transform:translateY(-8px);border-color:rgba(0,230,118,0.4)}
+.svc-card-img{position:absolute;inset:0;z-index:0}
+.svc-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
+.svc-card:hover .svc-card-img img{transform:scale(1.07)}
+.svc-card-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(6,15,7,0.97) 0%,rgba(6,15,7,0.7) 40%,rgba(6,15,7,0.15) 100%);transition:background 0.3s}
+.svc-card:hover .svc-card-overlay{background:linear-gradient(to top,rgba(6,15,7,0.99) 0%,rgba(6,15,7,0.75) 45%,rgba(6,15,7,0.2) 100%)}
+.svc-card-content{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:2rem}
+.svc-num{font-family:'Syne',sans-serif;font-size:3rem;font-weight:800;color:rgba(0,230,118,0.15);line-height:1;margin-bottom:0.8rem;transition:color 0.3s}
+.svc-card:hover .svc-num{color:rgba(0,230,118,0.3)}
+.svc-tag{display:inline-block;background:rgba(0,230,118,0.15);border:1px solid rgba(0,230,118,0.3);color:var(--g);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:100px;margin-bottom:0.8rem}
+.svc-name{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--w);margin-bottom:0.6rem;line-height:1.2}
+.svc-desc{font-size:12px;color:var(--w);line-height:1.7;max-height:0;overflow:hidden;transition:max-height 0.4s ease,opacity 0.3s;opacity:0}
+.svc-card:hover .svc-desc{max-height:80px;opacity:1}
+.svc-arrow{position:absolute;top:1.5rem;right:1.5rem;z-index:2;width:40px;height:40px;background:rgba(0,230,118,0.1);border:1px solid rgba(0,230,118,0.25);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--g);transition:all 0.3s}
+.svc-card:hover .svc-arrow{background:var(--g);color:#060F07;transform:rotate(-45deg)}
+
+/* BIG NUMBERS */
+.bignums{background:var(--bg2);padding:5rem 4rem;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(0,230,118,0.1);border-bottom:1px solid rgba(0,230,118,0.1)}
+.bignum-item{text-align:center;padding:2.5rem 1.5rem;cursor:none;border-right:1px solid rgba(0,230,118,0.1);position:relative;overflow:hidden;transition:background 0.3s}
+.bignum-item:last-child{border-right:none}
+.bignum-item::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:3px;background:var(--g);transition:width 0.4s}
+.bignum-item:hover::after{width:100%}
+.bignum-item:hover{background:rgba(0,230,118,0.04)}
+.bn{font-family:'Syne',sans-serif;font-size:4rem;font-weight:800;color:var(--g);line-height:1;display:block;letter-spacing:-2px}
+.bl{font-size:12px;color:var(--w);margin-top:0.7rem;font-weight:500}
+
+/* FOURGON */
+.fourgon-section{padding:7rem 4rem;background:var(--bg2)}
+.fourgon-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.fourgon-img-wrap{position:relative;height:600px;border-radius:24px;overflow:hidden;border:1px solid rgba(0,230,118,0.15)}
+.fourgon-img-wrap img{width:100%;height:100%;object-fit:cover}
+.fourgon-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,15,7,0.5) 0%,transparent 60%)}
+.fourgon-content p{font-size:15px;color:var(--w);line-height:1.8;margin-bottom:2rem}
+.fourgon-features{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2.5rem}
+.feat-item{background:rgba(0,230,118,0.05);border:1px solid rgba(0,230,118,0.12);border-radius:12px;padding:1.2rem;transition:all 0.3s;cursor:none}
+.feat-item:hover{border-color:rgba(0,230,118,0.3);background:rgba(0,230,118,0.08)}
+.feat-icon{font-size:20px;margin-bottom:0.5rem}
+.feat-title{font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:800;color:var(--w);margin-bottom:0.2rem}
+.feat-desc{font-size:11px;color:var(--w)}
+
+/* EQUIPEMENTS */
+.equip-section{padding:7rem 4rem}
+.equip-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
+.equip-card{position:relative;border-radius:20px;overflow:hidden;height:500px;border:1px solid rgba(0,230,118,0.1);transition:transform 0.3s,border-color 0.3s;cursor:none}
+.equip-card:hover{transform:translateY(-6px);border-color:rgba(0,230,118,0.35)}
+.equip-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
+.equip-card:hover img{transform:scale(1.05)}
+.equip-label{position:absolute;bottom:1.5rem;left:1.5rem;z-index:2;background:rgba(6,15,7,0.85);border:1px solid rgba(0,230,118,0.25);border-radius:10px;padding:0.7rem 1rem;backdrop-filter:blur(8px)}
+.equip-label-title{font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:800;color:var(--w)}
+.equip-label-sub{font-size:11px;color:var(--g);font-weight:600}
+.equip-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,15,7,0.6) 0%,transparent 50%)}
+
+/* WHY LIST */
+.why-list{display:flex;flex-direction:column;gap:1.3rem;margin-top:3rem;max-width:700px}
+.why-item{display:flex;gap:1.1rem;align-items:flex-start;padding:1.4rem;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:15px;transition:all 0.3s;cursor:none}
+.why-item:hover{background:rgba(0,230,118,0.05);border-color:rgba(0,230,118,0.2);transform:translateX(8px)}
+.why-icon{width:42px;height:42px;background:rgba(0,230,118,0.1);border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.why-item-title{font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:800;color:var(--w);margin-bottom:0.25rem}
+.why-item-desc{font-size:12px;color:var(--w);line-height:1.6}
+
+/* PROCESS */
+.process-wrap{background:var(--bg2);padding:7rem 4rem}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:4rem;position:relative}
+.process-line{position:absolute;top:34px;left:calc(12.5% + 14px);right:calc(12.5% + 14px);height:1px;background:linear-gradient(90deg,var(--g),rgba(0,230,118,0.08));z-index:0}
+.pstep{text-align:center;position:relative;z-index:1}
+.pstep-circle{width:68px;height:68px;margin:0 auto 2rem;background:var(--bg);border:2px solid rgba(0,230,118,0.25);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;color:var(--g);transition:all 0.3s;cursor:none}
+.pstep:hover .pstep-circle{background:var(--g);color:#060F07;border-color:var(--g);transform:scale(1.12);box-shadow:0 0 35px rgba(0,230,118,0.35)}
+.pstep-title{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:800;color:var(--w);margin-bottom:0.6rem}
+.pstep-desc{font-size:12px;color:var(--w);line-height:1.7}
+
+/* REVIEWS */
+.reviews-wrap{padding:7rem 4rem}
+.reviews-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:3rem}
+.rev-card{background:var(--bg2);border:1px solid rgba(255,255,255,0.06);border-radius:18px;padding:2rem;transition:all 0.3s;cursor:none;position:relative;overflow:hidden}
+.rev-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--g);transform:scaleX(0);transform-origin:left;transition:transform 0.4s}
+.rev-card:hover{border-color:rgba(0,230,118,0.2);transform:translateY(-5px)}
+.rev-card:hover::before{transform:scaleX(1)}
+.rev-card.rev-big{grid-column:span 2;background:rgba(0,230,118,0.04);border-color:rgba(0,230,118,0.12)}
+.rev-stars{color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:0.8rem}
+.rev-quote{font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;color:rgba(0,230,118,0.18);line-height:1;margin-bottom:0.4rem}
+.rev-text{font-size:13px;color:var(--w);line-height:1.8;margin-bottom:1.4rem;font-style:italic}
+.rev-person{display:flex;align-items:center;gap:10px}
+.rev-av{width:36px;height:36px;border-radius:50%;background:rgba(0,230,118,0.12);border:1px solid rgba(0,230,118,0.25);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--g);flex-shrink:0}
+.rev-name{font-size:13px;font-weight:600;color:var(--w)}
+.rev-date{font-size:11px;color:var(--w)}
+
+/* CONTACT + MAPS */
+.contact-section{padding:7rem 4rem;background:var(--bg)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:1.5rem}
+.contact-card{background:rgba(255,255,255,0.02);border:1px solid rgba(0,230,118,0.12);border-radius:16px;padding:1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:all 0.3s;cursor:none}
+.contact-card:hover{border-color:rgba(0,230,118,0.3);background:rgba(0,230,118,0.04);transform:translateX(6px)}
+.contact-card-icon{width:44px;height:44px;background:rgba(0,230,118,0.12);border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.contact-card-title{font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:800;color:var(--g);margin-bottom:0.3rem}
+.contact-card-val{font-size:14px;color:var(--w);font-weight:500}
+.contact-card-sub{font-size:11px;color:var(--w);margin-top:0.2rem}
+.map-wrap{border-radius:24px;overflow:hidden;border:1px solid rgba(0,230,118,0.15);height:500px}
+.map-wrap iframe{width:100%;height:100%;border:none;filter:invert(90%) hue-rotate(160deg) saturate(0.8) brightness(0.9)}
+
+/* BLOG */
+.blog-section{padding:7rem 4rem;background:var(--bg2)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.blog-card{background:var(--bg);border:1px solid rgba(255,255,255,0.06);border-radius:20px;overflow:hidden;transition:all 0.3s;cursor:none}
+.blog-card:hover{border-color:rgba(0,230,118,0.25);transform:translateY(-6px)}
+.blog-card-top{height:200px;background:var(--bg3);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.blog-emoji{font-size:3.5rem}
+.blog-card-body{padding:1.5rem}
+.blog-cat{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--g);margin-bottom:0.6rem}
+.blog-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:var(--w);margin-bottom:0.6rem;line-height:1.3}
+.blog-excerpt{font-size:12px;color:var(--w);line-height:1.7;margin-bottom:1rem}
+.blog-meta{font-size:11px;color:rgba(240,245,232,0.5);display:flex;justify-content:space-between}
+.blog-read{font-size:12px;color:var(--g);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-top:0.8rem;transition:gap 0.2s}
+.blog-read:hover{gap:8px}
+
+/* CTA */
+.cta-wrap{padding:8rem 4rem;text-align:center;position:relative;overflow:hidden;background:var(--bg2)}
+.cta-glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 55% at 50% 50%,rgba(0,230,118,0.08) 0%,transparent 70%)}
+.cta-wrap h2{font-family:'Syne',sans-serif;font-size:clamp(2.2rem,6vw,5rem);font-weight:800;letter-spacing:-2px;line-height:1.05;color:var(--w);margin-bottom:1.4rem;position:relative}
+.cta-wrap h2 .g{color:var(--g)}
+.cta-sub{font-size:15px;color:var(--w);margin-bottom:3rem;position:relative}
+.cta-btns{display:flex;gap:1rem;justify-content:center;position:relative;flex-wrap:wrap}
+.tel-big{display:inline-flex;align-items:center;gap:10px;font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800;color:var(--w);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:100px;padding:1rem 2.2rem;text-decoration:none;cursor:none;transition:all 0.3s}
+.tel-big:hover{border-color:var(--g);color:var(--g)}
+
+/* FOOTER */
+footer{padding:4rem;border-top:1px solid rgba(0,230,118,0.1);display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
+.f-logo{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:800;color:var(--w)}
+.f-logo span{color:var(--g)}
+.f-brand p{font-size:13px;color:var(--w);line-height:1.7;margin-top:0.8rem;max-width:250px}
+footer h4{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(240,245,232,0.4);margin-bottom:1.2rem}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:0.65rem}
+footer ul a{font-size:13px;color:var(--w);text-decoration:none;transition:color 0.2s}
+footer ul a:hover{color:var(--g)}
+.f-bottom{padding:1.5rem 4rem;border-top:1px solid rgba(255,255,255,0.05);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(240,245,232,0.5)}
+.f-bottom a{color:var(--g);text-decoration:none}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(38px);transition:opacity 0.7s cubic-bezier(0.25,0.46,0.45,0.94),transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-l{opacity:0;transform:translateX(-38px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal-l.visible{opacity:1;transform:translateX(0)}
+.reveal-r{opacity:0;transform:translateX(38px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal-r.visible{opacity:1;transform:translateX(0)}
+
+/* MOBILE */
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem}
+  .nav-links,.nav-cta{display:none}
+  .nav-burger{display:flex}
+  .hero{padding:0 1.5rem 3.5rem}
+  .hero h1{font-size:clamp(2.6rem,11vw,5rem);letter-spacing:-1px}
+  .hero-sub,.hero-stats{flex-wrap:wrap}
+  .hero-stats>div{min-width:calc(50% - 0.75rem)}
+  .stat-n{font-size:2rem}
+  .scroll-hint{display:none}
+  .section,.fourgon-section,.equip-section,.reviews-wrap,.blog-section,.contact-section{padding:5rem 1.5rem}
+  .s-title{font-size:clamp(1.8rem,7vw,2.8rem);margin-bottom:2.5rem}
+  .svc-grid{grid-template-columns:1fr;gap:1rem}
+  .svc-card{height:320px}
+  .bignums{grid-template-columns:1fr 1fr;padding:3rem 1.5rem}
+  .bignum-item{border-right:none;border-bottom:1px solid rgba(0,230,118,0.1)}
+  .bignum-item:nth-child(odd){border-right:1px solid rgba(0,230,118,0.1)}
+  .bignum-item:last-child,.bignum-item:nth-last-child(2):nth-child(odd){border-bottom:none}
+  .bn{font-size:3rem}
+  .fourgon-grid{grid-template-columns:1fr;gap:2.5rem}
+  .fourgon-img-wrap{height:320px}
+  .fourgon-features{grid-template-columns:1fr 1fr}
+  .equip-grid{grid-template-columns:1fr;gap:1rem}
+  .equip-card{height:320px}
+  .process-wrap{padding:5rem 1.5rem}
+  .process-steps{grid-template-columns:1fr 1fr;gap:1.5rem}
+  .process-line{display:none}
+  .reviews-grid{grid-template-columns:1fr}
+  .rev-card.rev-big{grid-column:span 1}
+  .contact-grid{grid-template-columns:1fr}
+  .map-wrap{height:350px}
+  .blog-grid{grid-template-columns:1fr}
+  .cta-wrap{padding:5rem 1.5rem}
+  footer{grid-template-columns:1fr 1fr;gap:2rem;padding:3rem 1.5rem}
+  .f-brand{grid-column:span 2}
+  .f-bottom{flex-direction:column;gap:0.5rem;text-align:center;padding:1.2rem 1.5rem}
+}
+@media(max-width:480px){
+  .hero h1{font-size:clamp(2.2rem,12vw,3.5rem)}
+  footer{grid-template-columns:1fr}
+  .f-brand{grid-column:span 1}
+  .fourgon-features{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div id="cur"></div>
+<div id="cur2"></div>
+<div id="particles"></div>
+
+<nav id="mainNav">
+  <a href="#" class="nav-logo">Les Artisans <span>du Vert</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#flotte">Flotte</a></li>
+    <li><a href="#whyus">Matériel</a></li>
+    <li><a href="#process">Méthode</a></li>
+    <li><a href="#avis">Avis</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#blog">Blog</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Devis gratuit →</button>
+  <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="nav-mobile" id="mobileMenu">
+  <a href="#services">Services</a>
+  <a href="#flotte">Notre flotte</a>
+  <a href="#whyus">Matériel</a>
+  <a href="#process">Méthode</a>
+  <a href="#avis">Avis clients</a>
+  <a href="#blog">Blog</a>
+  <a href="#contact" class="nm-cta">Devis gratuit →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-img"><img src="hero.png" alt="Les Artisans du Vert - Élagage Rhône 69"></div>
+  <div class="hero-overlay-top"></div>
+  <div class="hero-overlay-bottom"></div>
+  <div class="scroll-hint"><div class="scroll-line"></div><div class="scroll-text">scroll</div></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow"><span class="glowdot"></span> Disponible · Rhône 69 · Devis 24h</div>
+    <h1>
+      <span class="line1">L'élagage</span>
+      <span class="line2">élevé</span>
+      <span class="line3">au rang</span>
+      <span class="line4">d'art.</span>
+    </h1>
+    <p class="hero-sub">Particuliers et professionnels dans tout le Rhône. Élagage, abattage, taille de haies — chaque intervention est une signature.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-g">Demander un devis gratuit →</a>
+      <a href="tel:0617852687" class="btn-o">📞 06 17 85 26 87</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-n">500+</div><div class="stat-l">Projets réalisés</div></div>
+      <div><div class="stat-n">15 ans</div><div class="stat-l">D'expérience</div></div>
+      <div><div class="stat-n">4.9/5</div><div class="stat-l">Avis Google</div></div>
+      <div><div class="stat-n">10 ans</div><div class="stat-l">Garantie</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Élagage professionnel</span><span>Abattage d'arbres</span><span>Taille de haies</span>
+    <span>Rognage de souches</span><span>Espaces verts</span><span>Rhône 69</span>
+    <span>Garantie décennale</span><span>Devis gratuit</span>
+    <span>Élagage professionnel</span><span>Abattage d'arbres</span><span>Taille de haies</span>
+    <span>Rognage de souches</span><span>Espaces verts</span><span>Rhône 69</span>
+    <span>Garantie décennale</span><span>Devis gratuit</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section" id="services" style="background:var(--bg)">
+  <div class="s-eyebrow reveal">Nos expertises</div>
+  <div class="s-title reveal">Ce que nos <em>artisans</em> font<br>mieux que n'importe qui.</div>
+  <div class="svc-grid reveal">
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="elagage.png" alt="Élagage d'arbres Meyzieu Rhône"></div>
+      <div class="svc-card-overlay"></div>
+      <div class="svc-arrow">→</div>
+      <div class="svc-card-content">
+        <div class="svc-num">01</div>
+        <div class="svc-tag">Élagage</div>
+        <div class="svc-name">Élagage d'arbres</div>
+        <p class="svc-desc">Taille raisonnée, techniques NF, respect de l'arbre. Vos arbres en pleine santé, votre espace sécurisé.</p>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="abattage.png" alt="Abattage d'arbres Rhône 69"></div>
+      <div class="svc-card-overlay"></div>
+      <div class="svc-arrow">→</div>
+      <div class="svc-card-content">
+        <div class="svc-num">02</div>
+        <div class="svc-tag">Abattage</div>
+        <div class="svc-name">Abattage d'arbres</div>
+        <p class="svc-desc">Découpe contrôlée, zones contraintes acceptées. Chantier propre, aucune trace laissée.</p>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="haies.png" alt="Taille de haies Meyzieu"></div>
+      <div class="svc-card-overlay"></div>
+      <div class="svc-arrow">→</div>
+      <div class="svc-card-content">
+        <div class="svc-num">03</div>
+        <div class="svc-tag">Taille</div>
+        <div class="svc-name">Taille de haies</div>
+        <p class="svc-desc">Précision et régularité pour des haies impeccables qui repoussent mieux chaque saison.</p>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="rognage.png" alt="Rognage de souches Rhône"></div>
+      <div class="svc-card-overlay"></div>
+      <div class="svc-arrow">→</div>
+      <div class="svc-card-content">
+        <div class="svc-num">04</div>
+        <div class="svc-tag">Rognage</div>
+        <div class="svc-name">Rognage de souches</div>
+        <p class="svc-desc">Élimination jusqu'à 20 cm de profondeur. Terrain prêt à replanter ou aménager.</p>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="espaces.png" alt="Entretien espaces verts Meyzieu"></div>
+      <div class="svc-card-overlay"></div>
+      <div class="svc-arrow">→</div>
+      <div class="svc-card-content">
+        <div class="svc-num">05</div>
+        <div class="svc-tag">Espaces verts</div>
+        <div class="svc-name">Entretien espaces verts</div>
+        <p class="svc-desc">Entretien régulier de jardins, parcs et zones vertes. Particuliers, syndics, collectivités.</p>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="broyage.png" alt="Broyage évacuation végétaux Rhône"></div>
+      <div class="svc-card-overlay"></div>
+      <div class="svc-arrow">→</div>
+      <div class="svc-card-content">
+        <div class="svc-num">06</div>
+        <div class="svc-tag">Broyage</div>
+        <div class="svc-name">Broyage & évacuation</div>
+        <p class="svc-desc">Recyclage écologique ou évacuation totale. Zéro déchet laissé sur place.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIG NUMBERS -->
+<div class="bignums reveal">
+  <div class="bignum-item"><span class="bn" data-target="500">0</span><span class="bl">Projets réalisés</span></div>
+  <div class="bignum-item"><span class="bn" data-target="98">0</span><span class="bl">% clients satisfaits</span></div>
+  <div class="bignum-item"><span class="bn" data-target="15">0</span><span class="bl">Ans d'expérience</span></div>
+  <div class="bignum-item"><span class="bn" data-target="45">0</span><span class="bl">Avis Google ⭐ 4.9</span></div>
+</div>
+
+<!-- FOURGON -->
+<section class="fourgon-section" id="flotte">
+  <div class="fourgon-grid">
+    <div class="fourgon-img-wrap reveal-l">
+      <img src="fourgon.png" alt="Fourgon Les Artisans du Vert Rhône 69">
+      <div class="fourgon-overlay"></div>
+    </div>
+    <div class="fourgon-content reveal-r">
+      <div class="s-eyebrow">Notre flotte</div>
+      <div class="s-title" style="margin-bottom:1.5rem">Équipés pour <em>intervenir</em><br>partout dans le Rhône.</div>
+      <p>Nos véhicules professionnels sont équipés du matériel nécessaire pour intervenir rapidement sur n'importe quel chantier — du particulier à la collectivité.</p>
+      <div class="fourgon-features">
+        <div class="feat-item"><div class="feat-icon">🚐</div><div class="feat-title">Flotte dédiée</div><div class="feat-desc">Véhicules professionnels floqués</div></div>
+        <div class="feat-item"><div class="feat-icon">⚡</div><div class="feat-title">Réactivité 48h</div><div class="feat-desc">Intervention rapide garantie</div></div>
+        <div class="feat-item"><div class="feat-icon">🗺️</div><div class="feat-title">Tout le Rhône 69</div><div class="feat-desc">Meyzieu et alentours</div></div>
+        <div class="feat-item"><div class="feat-icon">🔧</div><div class="feat-title">Matériel pro</div><div class="feat-desc">Équipements haute performance</div></div>
+      </div>
+      <a href="#contact" class="btn-g">Nous contacter →</a>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPEMENTS -->
+<section class="equip-section" id="whyus" style="background:var(--bg)">
+  <div class="s-eyebrow reveal">Notre matériel</div>
+  <div class="s-title reveal">Du matériel <em>professionnel</em>,<br>des résultats d'exception.</div>
+  <div class="equip-grid reveal">
+    <div class="equip-card">
+      <img src="equip-flatlay.png" alt="Kit arboriste professionnel tronçonneuse harnais">
+      <div class="equip-overlay"></div>
+      <div class="equip-label"><div class="equip-label-title">Kit complet arboriste</div><div class="equip-label-sub">Tronçonneuse Stihl · Harnais · Cordes</div></div>
+    </div>
+    <div class="equip-card">
+      <img src="equip-mur.png" alt="Équipement certifié élagueur professionnel">
+      <div class="equip-overlay"></div>
+      <div class="equip-label"><div class="equip-label-title">Équipement certifié</div><div class="equip-label-sub">Matériel homologué · Sécurité maximale</div></div>
+    </div>
+  </div>
+  <div class="why-list reveal">
+    <div class="why-item"><div class="why-icon">🛡️</div><div><div class="why-item-title">Garantie décennale</div><div class="why-item-desc">Travaux assurés, certifiés, couverts. Vous ne prenez aucun risque.</div></div></div>
+    <div class="why-item"><div class="why-icon">⚡</div><div><div class="why-item-title">Réponse sous 24h</div><div class="why-item-desc">Devis gratuit rapidement. Intervention dans les 48h selon urgence.</div></div></div>
+    <div class="why-item"><div class="why-icon">✅</div><div><div class="why-item-title">Chantier 100% propre</div><div class="why-item-desc">Tous les déchets évacués. Vous récupérez votre espace impeccable.</div></div></div>
+    <div class="why-item"><div class="why-icon">🌍</div><div><div class="why-item-title">Éco-responsable</div><div class="why-item-desc">Broyage, compostage, respect de la nature à chaque intervention.</div></div></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<div class="process-wrap" id="process">
+  <div class="s-eyebrow reveal">Notre méthode</div>
+  <div class="s-title reveal">Simple, <em>rapide</em>, sans surprise.</div>
+  <div class="process-steps reveal">
+    <div class="process-line"></div>
+    <div class="pstep"><div class="pstep-circle">1</div><div class="pstep-title">Votre demande</div><p class="pstep-desc">Formulaire ou appel direct. Réponse garantie sous 24h.</p></div>
+    <div class="pstep"><div class="pstep-circle">2</div><div class="pstep-title">Visite gratuite</div><p class="pstep-desc">On se déplace, on évalue, on écoute vos besoins.</p></div>
+    <div class="pstep"><div class="pstep-circle">3</div><div class="pstep-title">Devis clair</div><p class="pstep-desc">Prix fixe, détaillé, sans mauvaise surprise.</p></div>
+    <div class="pstep"><div class="pstep-circle">4</div><div class="pstep-title">Intervention</div><p class="pstep-desc">Équipe qualifiée, chantier propre, résultat garanti.</p></div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<section class="reviews-wrap" id="avis">
+  <div class="s-eyebrow reveal">Ils nous font confiance</div>
+  <div class="s-title reveal">Nos clients <em>parlent</em><br>mieux que nous.</div>
+  <div class="reviews-grid reveal">
+    <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-quote">"</div><p class="rev-text">Travail propre et rapide. L'équipe a abattu un grand arbre en toute sécurité, sans laisser aucune trace. Vraiment impressionné !</p><div class="rev-person"><div class="rev-av">VF</div><div><div class="rev-name">Vaden Flamand</div><div class="rev-date">il y a 6 mois · Google</div></div></div></div>
+    <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-quote">"</div><p class="rev-text">Notre terrasse transformée en véritable espace vert. Équipe sympa, résultat au-delà de nos attentes. Je recommande vivement.</p><div class="rev-person"><div class="rev-av">JC</div><div><div class="rev-name">Jean Claude Ponsolle</div><div class="rev-date">il y a 7 mois · Google</div></div></div></div>
+    <div class="rev-card rev-big"><div class="rev-stars">★★★★★ · Google · il y a 7 mois</div><div class="rev-quote">"</div><p class="rev-text" style="font-size:15px">Professionnels, ponctuels et compétents. Patio livré dans les délais, dans le budget, exactement comme demandé. Si vous cherchez un élagueur sérieux dans le Rhône, c'est eux qu'il faut appeler.</p><div class="rev-person"><div class="rev-av">VH</div><div><div class="rev-name">Valerie Hector</div><div class="rev-date">Meyzieu · Client vérifié</div></div></div></div>
+  </div>
+</section>
+
+<!-- CONTACT + MAPS -->
+<section class="contact-section" id="contact">
+  <div class="s-eyebrow reveal">Nous trouver</div>
+  <div class="s-title reveal">Venez nous voir ou<br><em>appelez directement.</em></div>
+  <div class="contact-grid reveal">
+    <div class="contact-info">
+      <div class="contact-card">
+        <div class="contact-card-icon">📞</div>
+        <div><div class="contact-card-title">Téléphone</div><div class="contact-card-val">06 17 85 26 87</div><div class="contact-card-sub">Disponible du lundi au samedi</div></div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">✉️</div>
+        <div><div class="contact-card-title">Email</div><div class="contact-card-val">contact@les-artisans-du-vert.fr</div><div class="contact-card-sub">Réponse sous 24h garantie</div></div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">📍</div>
+        <div><div class="contact-card-title">Adresse</div><div class="contact-card-val">94 rue Jean Jaurès</div><div class="contact-card-sub">69330 Meyzieu, France</div></div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">🗺️</div>
+        <div><div class="contact-card-title">Zone d'intervention</div><div class="contact-card-val">Tout le Rhône (69)</div><div class="contact-card-sub">Meyzieu, Lyon, et alentours</div></div>
+      </div>
+      <a href="tel:0617852687" class="btn-g" style="margin-top:1rem">Appeler maintenant →</a>
+      <a href="mailto:contact@les-artisans-du-vert.fr" class="btn-o" style="margin-top:0.5rem">Envoyer un email →</a>
+    </div>
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2784.5!2d5.0!3d45.77!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea9f0e3c3c3f%3A0x0!2s94+Rue+Jean+Jaur%C3%A8s%2C+69330+Meyzieu!5e0!3m2!1sfr!2sfr!4v1699999999999!5m2!1sfr!2sfr"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Les Artisans du Vert - 94 rue Jean Jaurès, Meyzieu 69330">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG SEO -->
+<section class="blog-section" id="blog">
+  <div class="s-eyebrow reveal">Blog & Conseils</div>
+  <div class="s-title reveal">Nos <em>conseils d'experts</em><br>pour vos arbres et jardins.</div>
+  <div class="blog-grid reveal">
+    <div class="blog-card">
+      <div class="blog-card-top" style="background:linear-gradient(135deg,#0a2a0c,#1a5c1e)"><div class="blog-emoji">🌳</div></div>
+      <div class="blog-card-body">
+        <div class="blog-cat">Élagage</div>
+        <div class="blog-title">Quand faut-il élaguer ses arbres dans le Rhône ?</div>
+        <p class="blog-excerpt">La période idéale pour élaguer vos arbres dépend de l'essence et de la saison. En général, l'hiver (novembre à février) est la meilleure période pour les arbres à feuilles caduques...</p>
+        <div class="blog-meta"><span>Juin 2026</span><span>5 min de lecture</span></div>
+        <a href="#" class="blog-read">Lire l'article →</a>
+      </div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-card-top" style="background:linear-gradient(135deg,#1a0a0a,#5c1e1e)"><div class="blog-emoji">🪓</div></div>
+      <div class="blog-card-body">
+        <div class="blog-cat">Abattage</div>
+        <div class="blog-title">Abattage d'arbre : quand faire appel à un professionnel ?</div>
+        <p class="blog-excerpt">Un arbre dangereux, malade ou trop proche d'une construction nécessite l'intervention d'un professionnel. Voici les signes qui ne trompent pas et les risques à éviter...</p>
+        <div class="blog-meta"><span>Mai 2026</span><span>4 min de lecture</span></div>
+        <a href="#" class="blog-read">Lire l'article →</a>
+      </div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-card-top" style="background:linear-gradient(135deg,#0a1a2a,#1e3d5c)"><div class="blog-emoji">🌿</div></div>
+      <div class="blog-card-body">
+        <div class="blog-cat">Entretien</div>
+        <div class="blog-title">Taille de haies : les erreurs à ne pas commettre</div>
+        <p class="blog-excerpt">Une haie mal taillée peut mettre plusieurs saisons à se remettre. Hauteur, période, outils, fréquence — découvrez les règles d'or pour une haie toujours impeccable...</p>
+        <div class="blog-meta"><span>Avril 2026</span><span>6 min de lecture</span></div>
+        <a href="#" class="blog-read">Lire l'article →</a>
+      </div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-card-top" style="background:linear-gradient(135deg,#1a1a0a,#5c5c1e)"><div class="blog-emoji">🪨</div></div>
+      <div class="blog-card-body">
+        <div class="blog-cat">Rognage</div>
+        <div class="blog-title">Rognage de souches : tout ce qu'il faut savoir</div>
+        <p class="blog-excerpt">Après un abattage, la souche reste souvent un problème. Elle prend de la place, repousse et peut abriter des parasites. Le rognage est la solution la plus efficace...</p>
+        <div class="blog-meta"><span>Mars 2026</span><span>4 min de lecture</span></div>
+        <a href="#" class="blog-read">Lire l'article →</a>
+      </div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-card-top" style="background:linear-gradient(135deg,#0a2a1a,#1e5c3d)"><div class="blog-emoji">🌱</div></div>
+      <div class="blog-card-body">
+        <div class="blog-cat">Espaces verts</div>
+        <div class="blog-title">Entretien d'espaces verts : pourquoi déléguer à un pro ?</div>
+        <p class="blog-excerpt">Syndics, entreprises, communes — l'entretien régulier de vos espaces verts valorise votre patrimoine et améliore le cadre de vie. Découvrez nos formules d'entretien...</p>
+        <div class="blog-meta"><span>Février 2026</span><span>5 min de lecture</span></div>
+        <a href="#" class="blog-read">Lire l'article →</a>
+      </div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-card-top" style="background:linear-gradient(135deg,#2a0a1a,#5c1e3d)"><div class="blog-emoji">♻️</div></div>
+      <div class="blog-card-body">
+        <div class="blog-cat">Éco-responsable</div>
+        <div class="blog-title">Que faire des déchets verts après un élagage ?</div>
+        <p class="blog-excerpt">Broyage, compostage, paillage, évacuation — les déchets d'élagage ne sont pas des déchets comme les autres. Voici comment les valoriser plutôt que de les gaspiller...</p>
+        <div class="blog-meta"><span>Janvier 2026</span><span>4 min de lecture</span></div>
+        <a href="#" class="blog-read">Lire l'article →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-wrap">
+  <div class="cta-glow"></div>
+  <h2 class="reveal">Votre projet mérite<br>les <span class="g">meilleurs</span><br>artisans.</h2>
+  <p class="cta-sub reveal">Devis gratuit · Réponse sous 24h · Rhône 69 · Garantie décennale</p>
+  <div class="cta-btns reveal">
+    <a href="mailto:contact@les-artisans-du-vert.fr" class="btn-g" style="font-size:15px;padding:1.1rem 2.5rem">Demander un devis gratuit →</a>
+    <a class="tel-big" href="tel:0617852687">📞 06 17 85 26 87</a>
+  </div>
+</section>
+
+<footer>
+  <div class="f-brand"><div class="f-logo">Les Artisans <span>du Vert</span></div><p>Spécialistes de l'élagage, taille et abattage d'arbres à Meyzieu et dans tout le Rhône. Intervention rapide, travail soigné, garanti.</p></div>
+  <div><h4>Services</h4><ul>
+    <li><a href="#services">Élagage d'arbres</a></li>
+    <li><a href="#services">Abattage d'arbres</a></li>
+    <li><a href="#services">Rognage de souches</a></li>
+    <li><a href="#services">Taille de haies</a></li>
+    <li><a href="#services">Espaces verts</a></li>
+  </ul></div>
+  <div><h4>Entreprise</h4><ul>
+    <li><a href="#whyus">Notre matériel</a></li>
+    <li><a href="#flotte">Notre flotte</a></li>
+    <li><a href="#avis">Avis clients</a></li>
+    <li><a href="#blog">Blog & Conseils</a></li>
+    <li><a href="#process">Notre méthode</a></li>
+  </ul></div>
+  <div><h4>Contact</h4><ul>
+    <li><a href="tel:0617852687">06 17 85 26 87</a></li>
+    <li><a href="mailto:contact@les-artisans-du-vert.fr">contact@lesartisansduvert.fr</a></li>
+    <li><a href="#">94 rue Jean Jaurès, Meyzieu</a></li>
+    <li><a href="#contact">Devis gratuit →</a></li>
+  </ul></div>
+</footer>
+<div class="f-bottom">
+  <span>© 2026 Les Artisans du Vert · Tous droits réservés · Meyzieu Rhône 69</span>
+  <span>Site réalisé par <a href="#">Sakura Group</a></span>
+</div>
+
+<script>
+const cur=document.getElementById('cur'),cur2=document.getElementById('cur2');
+let mx=0,my=0,cx=0,cy=0;
+if(window.innerWidth>768){
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
+  (function animC(){cx+=(mx-cx)*0.12;cy+=(my-cy)*0.12;cur2.style.left=cx+'px';cur2.style.top=cy+'px';requestAnimationFrame(animC)})();
+  document.querySelectorAll('a,button,.svc-card,.why-item,.bignum-item,.pstep,.rev-card,.equip-card,.feat-item,.blog-card,.contact-card').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{cur.style.transform='translate(-50%,-50%) scale(2.2)';cur2.style.transform='translate(-50%,-50%) scale(0.4)'});
+    el.addEventListener('mouseleave',()=>{cur.style.transform='translate(-50%,-50%) scale(1)';cur2.style.transform='translate(-50%,-50%) scale(1)'});
+  });
+}
+const pc=document.getElementById('particles');
+for(let i=0;i<20;i++){
+  const p=document.createElement('div');p.className='p';
+  const s=Math.random()*4+2;
+  p.style.cssText=`width:${s}px;height:${s}px;left:${Math.random()*100}%;animation-duration:${Math.random()*14+9}s;animation-delay:${Math.random()*10}s`;
+  pc.appendChild(p);
+}
+const burger=document.getElementById('burger'),menu=document.getElementById('mobileMenu');
+burger.addEventListener('click',()=>{
+  menu.classList.toggle('open');
+  const sp=burger.querySelectorAll('span');
+  if(menu.classList.contains('open')){sp[0].style.transform='rotate(45deg) translate(5px,5px)';sp[1].style.opacity='0';sp[2].style.transform='rotate(-45deg) translate(5px,-5px)'}
+  else{sp[0].style.transform='';sp[1].style.opacity='';sp[2].style.transform=''}
+});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  menu.classList.remove('open');
+  burger.querySelectorAll('span').forEach(s=>{s.style.transform='';s.style.opacity=''});
+}));
+window.addEventListener('scroll',()=>{document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>60)});
+function animCount(el){
+  const target=+el.dataset.target,dur=2000,start=performance.now();
+  const plus=target===500||target===45;
+  function step(now){const p=Math.min((now-start)/dur,1),ease=1-Math.pow(1-p,3);el.textContent=Math.round(ease*target)+(plus?'+':'');if(p<1)requestAnimationFrame(step)}
+  requestAnimationFrame(step);
+}
+let counted=false;
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      if(e.target.classList.contains('bignums')&&!counted){counted=true;e.target.querySelectorAll('[data-target]').forEach(n=>animCount(n))}
+    }
+  });
+},{threshold:0.1});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r,.bignums').forEach(el=>obs.observe(el));
+document.querySelectorAll('.svc-card').forEach((el,i)=>{el.style.transitionDelay=i*0.07+'s'});
+document.querySelectorAll('.why-item').forEach((el,i)=>{el.style.transitionDelay=i*0.08+'s'});
+document.querySelectorAll('.pstep').forEach((el,i)=>{el.style.transitionDelay=i*0.1+'s'});
+document.querySelectorAll('.rev-card').forEach((el,i)=>{el.style.transitionDelay=i*0.1+'s'});
+document.querySelectorAll('.blog-card').forEach((el,i)=>{el.style.transitionDelay=i*0.08+'s'});
+document.querySelectorAll('.feat-item').forEach((el,i)=>{el.style.transitionDelay=i*0.08+'s'});
+</script>
+</body>
+</html>
