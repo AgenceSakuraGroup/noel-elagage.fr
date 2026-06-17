@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Noël Élagage — Découvrez Élagueur certifié à Meyzieu. 15 ans d'expérience dans le Rhône, certifications professionnelles, garantie décennale. Entreprise familiale de confiance.">
+<meta name="keywords" content="Noël Élagage équipe, élagueur professionnel Meyzieu, certifié élagage Rhône, entreprise familiale élagage 69, garantie décennale élagage Lyon">
+<meta property="og:title" content="Qui sommes-nous — Noël Élagage | Élagueur certifié Meyzieu Rhône">
+<meta property="og:description" content="Élagueur certifié depuis 15 ans à Meyzieu. Garantie décennale, 4.8★ Google, intervention dans tout le Rhône.">
+<title>Qui sommes-nous — Noël Élagage, Élagueur certifié | Noël Élagage Meyzieu</title>
+<link rel="canonical" href="https://noel-elagage.fr/qui-sommes-nous.html">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:ital,wght@0,700;0,900;1,700;1,900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --vert:#1B5E20;--vert2:#2E7D32;--vert3:#4CAF50;--vertl:#E8F5E9;--vertll:#F1F8E9;
+  --blanc:#FAFAF8;--texte:#1A1A18;--textem:#5A5A52;--or:#C8A951;--gris:#F5F4F0;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--blanc);color:var(--texte);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(250,250,248,0.97);border-bottom:1px solid rgba(27,94,32,0.1);backdrop-filter:blur(16px)}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:2px;color:var(--vert);display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-leaf{width:28px;height:28px;background:var(--vert3);border-radius:50% 0 50% 0;display:flex;align-items:center;justify-content:center;font-size:14px;animation:spin-leaf 10s linear infinite;flex-shrink:0}
+@keyframes spin-leaf{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--textem);font-size:13px;font-weight:500;text-decoration:none;transition:color 0.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--vert)}
+.nav-cta{background:var(--vert);color:#fff;font-weight:600;font-size:13px;padding:0.62rem 1.5rem;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.25s}
+.nav-cta:hover{background:var(--vert2);transform:translateY(-1px)}
+.nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-burger span{display:block;width:24px;height:2px;background:var(--texte);border-radius:2px;transition:all 0.3s}
+.nav-mobile{display:none;position:fixed;inset:0;background:var(--blanc);z-index:490;flex-direction:column;align-items:center;justify-content:center;gap:2rem;padding:2rem}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;letter-spacing:2px;color:var(--texte);text-decoration:none}
+.nav-mobile a:hover{color:var(--vert)}
+.nav-mobile .nm-cta{background:var(--vert);color:#fff;padding:1rem 3rem;border-radius:100px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:1rem}
+
+/* HERO */
+.hero-qsn{background:var(--gris);padding:9rem 4rem 6rem;position:relative;overflow:hidden}
+.hero-qsn::before{content:'';position:absolute;top:0;right:0;width:50%;height:100%;background:var(--vertl);opacity:0.4;clip-path:polygon(20% 0,100% 0,100% 100%,0% 100%)}
+.hero-qsn-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;position:relative;z-index:1}
+.hq-eyebrow{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--vert);margin-bottom:1rem;display:flex;align-items:center;gap:8px}
+.hq-eyebrow::before{content:'';width:18px;height:2px;background:var(--vert3);border-radius:2px}
+.hq-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,5.5rem);letter-spacing:3px;color:var(--texte);line-height:1;margin-bottom:1.5rem}
+.hq-title span{color:var(--vert)}
+.hq-desc{font-size:16px;color:var(--textem);line-height:1.85;margin-bottom:2.5rem}
+.hq-badges{display:flex;gap:0.8rem;flex-wrap:wrap}
+.hq-badge{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid rgba(27,94,32,0.15);color:var(--texte);font-size:12px;font-weight:600;padding:0.5rem 1rem;border-radius:100px}
+.hq-badge-ico{font-size:14px}
+.hero-photo{position:relative}
+.photo-frame{border-radius:28px;overflow:hidden;height:580px;border:2px solid rgba(27,94,32,0.15);box-shadow:0 20px 60px rgba(0,0,0,0.12);position:relative}
+.photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.photo-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(8,32,8,0.9) 0%,transparent 50%);padding:2rem}
+.po-name{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:2px;color:#fff;line-height:1}
+.po-title{font-size:13px;color:rgba(255,255,255,0.7);margin-top:4px}
+.photo-cert{position:absolute;top:1.5rem;right:1.5rem;background:var(--vert);border-radius:14px;padding:1rem;text-align:center}
+.pc-ico{font-size:1.8rem;display:block;margin-bottom:0.3rem}
+.pc-t{font-size:10px;font-weight:600;color:#fff;text-transform:uppercase;letter-spacing:1.5px}
+
+/* HISTOIRE */
+.histoire{padding:6rem 4rem;background:var(--blanc)}
+.histoire-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.hist-content h2{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:var(--texte);line-height:1.15;margin-bottom:1.5rem}
+.hist-content h2 em{font-style:italic;color:var(--vert)}
+.hist-content p{font-size:15px;color:var(--textem);line-height:1.85;margin-bottom:1.2rem}
+.timeline{display:flex;flex-direction:column;gap:0;margin-top:3rem}
+.tl-item{display:flex;gap:1.5rem;position:relative;padding-bottom:2rem}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{content:'';position:absolute;left:19px;top:42px;bottom:0;width:2px;background:linear-gradient(to bottom,rgba(27,94,32,0.3),transparent)}
+.tl-item:last-child::before{display:none}
+.tl-dot{width:40px;height:40px;background:var(--vertl);border:2px solid rgba(27,94,32,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.tl-year{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:1px;color:var(--vert);margin-bottom:0.2rem}
+.tl-t{font-size:14px;font-weight:600;color:var(--texte);margin-bottom:0.2rem}
+.tl-d{font-size:13px;color:var(--textem);line-height:1.6}
+
+/* CERTIFICATIONS */
+.certifs{padding:6rem 4rem;background:var(--gris)}
+.certif-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.certif-card{background:#fff;border:1px solid rgba(27,94,32,0.1);border-radius:20px;padding:2rem;text-align:center;transition:all 0.3s}
+.certif-card:hover{border-color:rgba(27,94,32,0.3);transform:translateY(-5px);box-shadow:0 16px 40px rgba(27,94,32,0.1)}
+.certif-ico{width:64px;height:64px;background:var(--vertl);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 1.2rem}
+.certif-t{font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;color:var(--texte);margin-bottom:0.5rem}
+.certif-d{font-size:12px;color:var(--textem);line-height:1.7}
+.certif-badge{display:inline-block;background:var(--vertl);color:var(--vert);font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:0.25rem 0.7rem;border-radius:100px;margin-top:0.8rem}
+
+/* VALEURS */
+.valeurs{padding:6rem 4rem;background:var(--blanc)}
+.val-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:5rem;align-items:center}
+.val-list{display:flex;flex-direction:column;gap:1.2rem;margin-top:2rem}
+.val-item{display:flex;gap:1.2rem;align-items:flex-start;padding:1.5rem;background:var(--gris);border:1px solid rgba(27,94,32,0.08);border-radius:16px;transition:all 0.3s;cursor:default}
+.val-item:hover{border-color:rgba(27,94,32,0.25);background:var(--vertl);transform:translateX(8px)}
+.val-ico{width:48px;height:48px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.val-t{font-size:0.95rem;font-weight:700;color:var(--texte);margin-bottom:0.3rem}
+.val-d{font-size:13px;color:var(--textem);line-height:1.65}
+.val-img{border-radius:24px;overflow:hidden;height:500px;border:1px solid rgba(27,94,32,0.1)}
+.val-img img{width:100%;height:100%;object-fit:cover}
+
+/* CHIFFRES */
+.chiffres{background:var(--vert);display:grid;grid-template-columns:repeat(4,1fr)}
+.chi{text-align:center;padding:3rem 1.5rem;border-right:1px solid rgba(255,255,255,0.1)}
+.chi:last-child{border-right:none}
+.chi-n{font-family:'Bebas Neue',sans-serif;font-size:4rem;letter-spacing:1px;color:#fff;display:block;line-height:1}
+.chi-l{font-size:12px;color:rgba(255,255,255,0.65);margin-top:0.5rem;font-weight:500}
+
+/* AVIS */
+.avis-section{padding:6rem 4rem;background:var(--blanc)}
+.avis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem}
+.avis-card{background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:18px;padding:1.8rem;transition:all 0.3s;cursor:default}
+.avis-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px rgba(0,0,0,0.08)}
+.rstars{color:var(--or);font-size:14px;letter-spacing:3px;margin-bottom:0.8rem}
+.rtext{font-size:13px;color:var(--textem);line-height:1.8;margin-bottom:1.3rem;font-style:italic}
+.rperson{display:flex;align-items:center;gap:10px}
+.rav{width:36px;height:36px;border-radius:50%;background:var(--vertl);border:1px solid rgba(27,94,32,0.2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:var(--vert);flex-shrink:0}
+.rname{font-size:13px;font-weight:600;color:var(--texte)}
+.rdate{font-size:11px;color:var(--textem)}
+
+/* CONTACT CTA */
+.cta-section{padding:7rem 4rem;text-align:center;background:var(--vert);position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;top:-100px;right:-100px;width:350px;height:350px;background:rgba(255,255,255,0.04);border-radius:50%}
+.cta-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,5.5rem);letter-spacing:3px;color:#fff;line-height:1;margin-bottom:1.2rem;position:relative}
+.cta-sub{font-size:14px;color:rgba(255,255,255,0.7);margin-bottom:2.5rem;position:relative}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative}
+.btn-w{background:#fff;color:var(--vert);font-weight:600;font-size:14px;padding:1rem 2rem;border-radius:100px;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none}
+.btn-w:hover{background:var(--vertl);transform:translateY(-2px)}
+.btn-ow{background:transparent;color:#fff;font-weight:600;font-size:14px;padding:1rem 2rem;border-radius:100px;border:2px solid rgba(255,255,255,0.35);cursor:pointer;font-family:'DM Sans',sans-serif;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none}
+.btn-ow:hover{border-color:#fff;background:rgba(255,255,255,0.1)}
+.maps-btn{display:inline-flex;align-items:center;gap:10px;background:#1B5E20;color:#fff;text-decoration:none;padding:1rem 2rem;border-radius:100px;font-weight:600;font-size:14px;transition:all 0.3s}
+.maps-btn:hover{background:#2E7D32;transform:translateY(-2px);box-shadow:0 8px 24px rgba(27,94,32,0.3)}
+
+/* FOOTER */
+footer{padding:3.5rem 4rem 2rem;background:#0A1F0B;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
+.flogo{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:2px;color:#fff}
+.flogo span{color:var(--vert3)}
+.fbrand p{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7;margin-top:0.8rem;max-width:230px}
+footer h4{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:1.1rem}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+footer ul a{font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;transition:all 0.2s;display:inline-block}
+footer ul a:hover{color:var(--vert3);padding-left:5px}
+.fbot{padding:1.2rem 4rem;background:#0A1F0B;border-top:1px solid rgba(255,255,255,0.05);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,0.25)}
+.fbot a{color:var(--vert3);text-decoration:none}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.on{opacity:1;transform:translateY(0)}
+.reveal-l{opacity:0;transform:translateX(-28px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal-l.on{opacity:1;transform:translateX(0)}
+.reveal-r{opacity:0;transform:translateX(28px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal-r.on{opacity:1;transform:translateX(0)}
+
+/* MOBILE */
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem}
+  .nav-links,.nav-cta{display:none}
+  .nav-burger{display:flex}
+  .hero-qsn{padding:7rem 1.5rem 4rem}
+  .hero-qsn::before{display:none}
+  .hero-qsn-inner{grid-template-columns:1fr;gap:3rem}
+  .photo-frame{height:380px}
+  .histoire{padding:4rem 1.5rem}
+  .histoire-grid{grid-template-columns:1fr;gap:3rem}
+  .certifs{padding:4rem 1.5rem}
+  .certif-grid{grid-template-columns:1fr}
+  .valeurs{padding:4rem 1.5rem}
+  .val-grid{grid-template-columns:1fr;gap:3rem}
+  .val-img{height:280px}
+  .chiffres{grid-template-columns:1fr 1fr}
+  .chi{border-right:none;border-bottom:1px solid rgba(255,255,255,0.1)}
+  .chi:nth-child(odd){border-right:1px solid rgba(255,255,255,0.1)}
+  .chi-n{font-size:3rem}
+  .avis-section{padding:4rem 1.5rem}
+  .avis-grid{grid-template-columns:1fr}
+  .cta-section{padding:4rem 1.5rem}
+  .cta-btns{flex-direction:column;align-items:center}
+  .btn-w,.btn-ow,.maps-btn{width:100%;max-width:320px;justify-content:center}
+  footer{grid-template-columns:1fr 1fr;gap:2rem;padding:3rem 1.5rem}
+  .fbrand{grid-column:span 2}
+  .fbot{flex-direction:column;gap:0.5rem;text-align:center;padding:1.2rem 1.5rem}
+}
+@media(max-width:480px){
+  footer{grid-template-columns:1fr}
+  .fbrand{grid-column:span 1}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo"><div class="logo-leaf">🌿</div>NOËL ÉLAGAGE</a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="qui-sommes-nous.html" class="active">Notre équipe</a></li>
+    <li><a href="index.html#flotte">Notre flotte</a></li>
+    <li><a href="zones.html">Zones</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Devis gratuit →</a>
+  <button class="nav-burger" id="burger"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="mobileMenu">
+  <a href="index.html#services">Services</a>
+  <a href="qui-sommes-nous.html">Équipe</a>
+  <a href="zones.html">Zones</a>
+  <a href="blog.html">Blog</a>
+  <a href="index.html#contact" class="nm-cta">Devis gratuit →</a>
+</div>
+
+<!-- HERO -->
+<header class="hero-qsn">
+  <div class="hero-qsn-inner">
+    <div>
+      <div class="hq-eyebrow">Qui sommes-nous</div>
+      <h1 class="hq-title">ARTISAN,<br><span>PAS PRESTATAIRE.</span></h1>
+      <p class="hq-desc">Chez Noël Élagage, chaque arbre est traité avec l'attention qu'il mérite. Notre équipe intervient personnellement sur chaque chantier — parce que la qualité ne se délègue pas.</p>
+      <div class="hq-badges">
+        <span class="hq-badge"><span class="hq-badge-ico">🛡️</span>Garantie décennale</span>
+        <span class="hq-badge"><span class="hq-badge-ico">🏅</span>Certifié professionnel</span>
+        <span class="hq-badge"><span class="hq-badge-ico">⭐</span>4.8/5 Google</span>
+        <span class="hq-badge"><span class="hq-badge-ico">🌿</span>15 ans d'expérience</span>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="photo-frame">
+        <img src="images/adel-pro.png" alt="Noël Élagage — Élagueur certifié Meyzieu Rhône">
+        <div class="photo-overlay">
+          <div class="po-name">NOËL ÉLAGAGE</div>
+          <div class="po-title">Élagueur certifié · Meyzieu, Rhône 69</div>
+        </div>
+        <div class="photo-cert">
+          <span class="pc-ico">🏅</span>
+          <span class="pc-t">Certifié</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HISTOIRE -->
+<section class="histoire">
+  <div class="histoire-grid">
+    <div class="hist-content reveal">
+      <h2>Une passion<br>pour les arbres <em>depuis l'enfance.</em></h2>
+      <p>Notre fondateur a grandi entouré de la nature dans la région lyonnaise. Très tôt passionné par les arbres et les végétaux, il a orienté sa formation professionnelle vers l'arboriculture et l'élagage, deux disciplines qui mêlent technique, sécurité et respect du vivant.</p>
+      <p>Après plusieurs années à travailler pour d'autres entreprises du Rhône, Il décide en 2010 de fonder Noël Élagage à Meyzieu. L'entreprise grandit progressivement, portée par la réputation de sérieux et de qualité de l'équipe sur le terrain.</p>
+      <p>Aujourd'hui, Noël Élagage compte parmi les références de l'élagage dans le Rhône, avec plus de 500 chantiers réalisés, 76 avis Google et une note de 4.8 étoiles. La philosophie reste la même : intervenir comme si c'était notre propre jardin.</p>
+    </div>
+    <div class="reveal">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot">🌱</div>
+          <div>
+            <div class="tl-year">2008</div>
+            <div class="tl-t">Formation professionnelle</div>
+            <p class="tl-d">CAP Travaux Paysagers, spécialisation élagage et abattage. Formation aux techniques NF de taille raisonnée.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">🌿</div>
+          <div>
+            <div class="tl-year">2010</div>
+            <div class="tl-t">Création de Noël Élagage</div>
+            <p class="tl-d">Lancement de l'entreprise à Meyzieu. Premiers contrats avec des particuliers du secteur Décines-Meyzieu-Genas.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">🌳</div>
+          <div>
+            <div class="tl-year">2015</div>
+            <div class="tl-t">Expansion dans tout le Rhône</div>
+            <p class="tl-d">Extension de la zone d'intervention à Lyon et toute la métropole. Acquisition du premier fourgon floqué et du broyeur professionnel.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">🏅</div>
+          <div>
+            <div class="tl-year">2019</div>
+            <div class="tl-t">Certification & Garantie décennale</div>
+            <p class="tl-d">Obtention de la garantie décennale et renouvellement des certifications professionnelles. Premier contrat de collectivité.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">⭐</div>
+          <div>
+            <div class="tl-year">2026</div>
+            <div class="tl-t">500+ chantiers · 4.8★ Google</div>
+            <p class="tl-d">Plus de 500 projets réalisés dans le Rhône. 76 avis Google, note moyenne 4.8/5. Référence de l'élagage dans la métropole lyonnaise.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="certifs">
+  <div class="eyebrow reveal">Certifications & Qualifications</div>
+  <h2 style="font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:var(--texte);line-height:1.15;margin-bottom:0.5rem" class="reveal">Nos garanties <em style="font-style:italic;color:var(--vert)">professionnelles</em></h2>
+  <p style="font-size:15px;color:var(--textem);line-height:1.8;margin-bottom:3rem;max-width:600px" class="reveal">Chaque intervention est réalisée dans le respect des normes professionnelles et des réglementations en vigueur. Votre sécurité et la santé de vos arbres sont notre priorité absolue.</p>
+  <div class="certif-grid reveal">
+    <div class="certif-card">
+      <div class="certif-ico">🛡️</div>
+      <div class="certif-t">Garantie Décennale</div>
+      <p class="certif-d">Tous nos travaux sont couverts par une garantie décennale. En cas de problème suite à notre intervention, vous êtes protégé pour 10 ans.</p>
+      <span class="certif-badge">Obligatoire & active</span>
+    </div>
+    <div class="certif-card">
+      <div class="certif-ico">🌳</div>
+      <div class="certif-t">CAP Travaux Paysagers</div>
+      <p class="certif-d">Formation initiale spécialisée en arboriculture et élagage. Maîtrise des techniques de taille raisonnée conformes aux normes NF.</p>
+      <span class="certif-badge">Certifié depuis 2008</span>
+    </div>
+    <div class="certif-card">
+      <div class="certif-ico">⚡</div>
+      <div class="certif-t">Habilitation électrique</div>
+      <p class="certif-d">Habilitation pour travaux à proximité des réseaux électriques. Intervenir en sécurité même près des lignes — une compétence indispensable.</p>
+      <span class="certif-badge">Habilitation à jour</span>
+    </div>
+    <div class="certif-card">
+      <div class="certif-ico">🔗</div>
+      <div class="certif-t">Certificat de spécialité</div>
+      <p class="certif-d">Spécialisation en techniques de grimpe et travaux en hauteur. Sécurité et efficacité garanties même pour les arbres les plus imposants.</p>
+      <span class="certif-badge">Spécialiste grimpe</span>
+    </div>
+    <div class="certif-card">
+      <div class="certif-ico">🌱</div>
+      <div class="certif-t">Certiphyto</div>
+      <p class="certif-d">Certificat pour l'utilisation des produits phytosanitaires. Traitements raisonnés, respect des règles environnementales et de la biodiversité.</p>
+      <span class="certif-badge">Éco-responsable</span>
+    </div>
+    <div class="certif-card">
+      <div class="certif-ico">📋</div>
+      <div class="certif-t">RC Professionnelle</div>
+      <p class="certif-d">Responsabilité civile professionnelle à jour. Protection complète pour le client et l'entreprise sur chaque intervention.</p>
+      <span class="certif-badge">Assurance complète</span>
+    </div>
+  </div>
+</section>
+
+<!-- VALEURS -->
+<section class="valeurs">
+  <div class="val-grid">
+    <div class="reveal-l">
+      <div style="font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--vert);margin-bottom:0.8rem;display:flex;align-items:center;gap:8px"><span style="width:18px;height:2px;background:var(--vert3);border-radius:2px;display:inline-block"></span>Nos valeurs</div>
+      <h2 style="font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:var(--texte);line-height:1.15;margin-bottom:2rem">Ce qui guide <em style="font-style:italic;color:var(--vert)">chaque<br>intervention.</em></h2>
+      <div class="val-list">
+        <div class="val-item">
+          <div class="val-ico">🎯</div>
+          <div>
+            <div class="val-t">Précision avant tout</div>
+            <p class="val-d">Chaque coupe est réfléchie. Nous ne taillons pas pour tailler — nous élagons pour la santé et la beauté de l'arbre, dans le respect de sa structure naturelle.</p>
+          </div>
+        </div>
+        <div class="val-item">
+          <div class="val-ico">🤝</div>
+          <div>
+            <div class="val-t">Transparence totale</div>
+            <p class="val-d">Devis détaillé, prix fixe, explications claires sur chaque opération. Vous savez exactement ce qu'on fait chez vous, et pourquoi.</p>
+          </div>
+        </div>
+        <div class="val-item">
+          <div class="val-ico">♻️</div>
+          <div>
+            <div class="val-t">Respect de la nature</div>
+            <p class="val-d">Broyage en paillage, compostage, évacuation responsable. Chaque chantier est pensé pour minimiser l'impact environnemental.</p>
+          </div>
+        </div>
+        <div class="val-item">
+          <div class="val-ico">💪</div>
+          <div>
+            <div class="val-t">Engagement de résultat</div>
+            <p class="val-d">On ne part pas tant que vous n'êtes pas satisfait. Chantier propre, arbre en bonne santé, espace rendu impeccable. C'est notre promesse.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal-r">
+      <div class="val-img"><img src="images/equipe-chantier.png" alt="Équipe Noël Élagage en intervention dans le Rhône"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHIFFRES -->
+<div class="chiffres reveal">
+  <div class="chi"><span class="chi-n">500+</span><span class="chi-l">Chantiers réalisés</span></div>
+  <div class="chi"><span class="chi-n">15 ans</span><span class="chi-l">D'expérience dans le Rhône</span></div>
+  <div class="chi"><span class="chi-n">4.8★</span><span class="chi-l">Note Google · 76 avis</span></div>
+  <div class="chi"><span class="chi-n">80+</span><span class="chi-l">Communes couvertes</span></div>
+</div>
+
+<!-- AVIS -->
+<section class="avis-section">
+  <div style="font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--vert);margin-bottom:0.8rem;display:flex;align-items:center;gap:8px" class="reveal"><span style="width:18px;height:2px;background:var(--vert3);border-radius:2px;display:inline-block"></span>Ils nous font confiance</div>
+  <h2 style="font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:var(--texte);line-height:1.15;margin-bottom:3rem" class="reveal">Ce que disent nos <em style="font-style:italic;color:var(--vert)">clients.</em></h2>
+  <div class="avis-grid reveal">
+    <div class="avis-card">
+      <div class="rstars">★★★★★</div>
+      <p class="rtext">Avec Noël tout est carré depuis le tarif jusqu'à la prestation. Abattage d'un sapin devenu trop haut. Travail impeccable, je recommande !</p>
+      <div class="rperson"><div class="rav">PL</div><div><div class="rname">Patricia Lolaeff</div><div class="rdate">il y a 8 mois · Google · Meyzieu</div></div></div>
+    </div>
+    <div class="avis-card">
+      <div class="rstars">★★★★★</div>
+      <p class="rtext">L'entreprise a réalisé un travail exceptionnel en taillant nos grands arbres. Conseils très pertinents, travail soigné et précis. On refait appel sans hésiter.</p>
+      <div class="rperson"><div class="rav">VT</div><div><div class="rname">Victor Therrien</div><div class="rdate">il y a 5 mois · Google · Lyon</div></div></div>
+    </div>
+    <div class="avis-card">
+      <div class="rstars">★★★★★</div>
+      <p class="rtext">M. Noël a réalisé un travail efficace et rapide pour l'abattage d'un arbre. Évacuation des branchages, tronc débité en rondins, nettoyage complet. On ne voit plus rien !</p>
+      <div class="rperson"><div class="rav">CB</div><div><div class="rname">Client vérifié</div><div class="rdate">il y a 7 mois · Google · Décines</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-h">RENCONTRONS-NOUS<br>SUR VOTRE CHANTIER.</div>
+  <p class="cta-sub">Devis gratuit · Déplacement gratuit · Rhône 69</p>
+  <div class="cta-btns">
+    <a href="index.html#contact" class="btn-w">Demander un devis gratuit →</a>
+    <a href="tel:0617852687" class="btn-ow">📞 06 17 85 26 87</a>
+    <a href="https://share.google/j6JQxt8uWRVy8gg09" target="_blank" rel="noopener" class="maps-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      Voir sur Google Maps · 4,8★ 76 avis
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fbrand"><div class="flogo">NOËL <span>ÉLAGAGE</span></div><p>Spécialistes de l'élagage, taille et abattage d'arbres à Meyzieu et dans tout le Rhône. Intervention rapide, travail soigné, garanti.</p></div>
+  <div><h4>Services</h4><ul>
+    <li><a href="index.html#services">Élagage d'arbres</a></li>
+    <li><a href="index.html#services">Abattage d'arbres</a></li>
+    <li><a href="index.html#services">Rognage de souches</a></li>
+    <li><a href="index.html#services">Taille de haies</a></li>
+    <li><a href="index.html#services">Espaces verts</a></li>
+  </ul></div>
+  <div><h4>Entreprise</h4><ul>
+    <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+    <li><a href="index.html#flotte">Notre flotte</a></li>
+    <li><a href="index.html#avis">Avis clients</a></li>
+    <li><a href="blog.html">Blog & Conseils</a></li>
+    <li><a href="zones.html">Zones d'intervention</a></li>
+  </ul></div>
+  <div><h4>Contact</h4><ul>
+    <li><a href="tel:0617852687">06 17 85 26 87</a></li>
+    <li><a href="mailto:championwaeldo@gmail.com">championwaeldo@gmail.com</a></li>
+    <li><a href="#">94 rue Jean Jaurès, Meyzieu</a></li>
+    <li><a href="index.html#contact">Devis gratuit →</a></li>
+  </ul></div>
+</footer>
+<div class="fbot">
+  <span>© 2026 Noël Élagage · Élagueur certifié Meyzieu Rhône 69</span>
+  <span>Site réalisé par <a href="#">Sakura Group</a></span>
+</div>
+
+<script>
+const burger=document.getElementById('burger'),menu=document.getElementById('mobileMenu');
+burger.addEventListener('click',()=>{
+  menu.classList.toggle('open');
+  document.body.style.overflow=menu.classList.contains('open')?'hidden':'';
+  const sp=burger.querySelectorAll('span');
+  if(menu.classList.contains('open')){sp[0].style.transform='rotate(45deg) translate(5px,5px)';sp[1].style.opacity='0';sp[2].style.transform='rotate(-45deg) translate(5px,-5px)'}
+  else{sp[0].style.transform='';sp[1].style.opacity='';sp[2].style.transform=''}
+});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  menu.classList.remove('open');
+  document.body.style.overflow='';
+  burger.querySelectorAll('span').forEach(s=>{s.style.transform='';s.style.opacity=''});
+}));
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')})},{threshold:0.08});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>obs.observe(el));
+document.querySelectorAll('.certif-card').forEach((el,i)=>{el.style.transitionDelay=i*0.08+'s'});
+document.querySelectorAll('.val-item').forEach((el,i)=>{el.style.transitionDelay=i*0.08+'s'});
+</script>
+</body>
+</html>
