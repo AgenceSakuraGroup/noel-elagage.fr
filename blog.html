@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Blog Noël Élagage — Conseils d'experts en élagage, abattage d'arbres et entretien de jardins dans le Rhône (69). Articles pratiques pour entretenir vos arbres toute l'année.">
+<meta name="keywords" content="blog élagage, conseils élagueur, quand élaguer arbres, abattage arbres conseils, entretien haies Rhône, taille arbres saison, souches jardin, broyage végétaux, élagage arbres fruitiers">
+<meta property="og:title" content="Blog & Conseils — Noël Élagage | Experts Arbres Rhône 69">
+<meta property="og:description" content="Conseils d'experts pour l'entretien de vos arbres et jardins dans le Rhône. Élagage, abattage, taille de haies : tout ce qu'il faut savoir.">
+<title>Blog & Conseils Élagage — Noël Élagage | Rhône 69</title>
+<link rel="canonical" href="https://noel-elagage.fr/blog.html">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:ital,wght@0,700;0,900;1,700;1,900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --vert:#1B5E20;--vert2:#2E7D32;--vert3:#4CAF50;--vertl:#E8F5E9;--vertll:#F1F8E9;
+  --blanc:#FAFAF8;--texte:#1A1A18;--textem:#5A5A52;--or:#C8A951;--gris:#F5F4F0;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--blanc);color:var(--texte);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4rem;background:rgba(250,250,248,0.97);border-bottom:1px solid rgba(27,94,32,0.1);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:2px;color:var(--vert);display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-leaf{width:28px;height:28px;background:var(--vert3);border-radius:50% 0 50% 0;display:flex;align-items:center;justify-content:center;font-size:14px;animation:spin-leaf 10s linear infinite;flex-shrink:0}
+@keyframes spin-leaf{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--textem);font-size:13px;font-weight:500;text-decoration:none;transition:color 0.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--vert)}
+.nav-cta{background:var(--vert);color:#fff;font-weight:600;font-size:13px;padding:0.62rem 1.5rem;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;transition:all 0.25s}
+.nav-cta:hover{background:var(--vert2);transform:translateY(-1px)}
+.nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-burger span{display:block;width:24px;height:2px;background:var(--texte);border-radius:2px;transition:all 0.3s}
+.nav-mobile{display:none;position:fixed;inset:0;background:var(--blanc);z-index:490;flex-direction:column;align-items:center;justify-content:center;gap:2rem;padding:2rem}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;letter-spacing:2px;color:var(--texte);text-decoration:none;transition:color 0.2s}
+.nav-mobile a:hover{color:var(--vert)}
+.nav-mobile .nm-cta{background:var(--vert);color:#fff;padding:1rem 3rem;border-radius:100px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:1rem}
+
+/* HERO BLOG */
+.blog-hero{background:var(--gris);padding:9rem 4rem 5rem;border-bottom:1px solid rgba(27,94,32,0.1)}
+.bh-inner{max-width:760px}
+.bh-eyebrow{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--vert);margin-bottom:1rem;display:flex;align-items:center;gap:8px}
+.bh-eyebrow::before{content:'';width:18px;height:2px;background:var(--vert3);border-radius:2px}
+.bh-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,7vw,6rem);letter-spacing:3px;color:var(--texte);line-height:1;margin-bottom:1rem}
+.bh-title span{color:var(--vert)}
+.bh-sub{font-size:16px;color:var(--textem);line-height:1.8;max-width:560px}
+.bh-filters{display:flex;gap:0.6rem;margin-top:2.5rem;flex-wrap:wrap}
+.filter-btn{background:#fff;border:1.5px solid rgba(27,94,32,0.15);color:var(--textem);font-size:12px;font-weight:600;padding:0.5rem 1.2rem;border-radius:100px;cursor:pointer;transition:all 0.25s;font-family:'DM Sans',sans-serif}
+.filter-btn:hover,.filter-btn.active{background:var(--vert);border-color:var(--vert);color:#fff}
+
+/* FEATURED ARTICLE */
+.featured-section{padding:4rem 4rem 0}
+.featured-card{display:grid;grid-template-columns:1.2fr 0.8fr;gap:0;border-radius:24px;overflow:hidden;border:1px solid rgba(27,94,32,0.1);background:#fff;transition:box-shadow 0.3s;text-decoration:none;color:inherit}
+.featured-card:hover{box-shadow:0 20px 60px rgba(27,94,32,0.12)}
+.fc-img{height:420px;position:relative;overflow:hidden}
+.fc-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
+.featured-card:hover .fc-img img{transform:scale(1.04)}
+.fc-img-ov{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(8,32,8,0.6) 100%)}
+.fc-badge{position:absolute;top:1.5rem;left:1.5rem;background:var(--vert);color:#fff;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px}
+.fc-body{padding:3rem;display:flex;flex-direction:column;justify-content:center}
+.fc-cat{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--vert);margin-bottom:1rem}
+.fc-title{font-family:'Fraunces',serif;font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;color:var(--texte);margin-bottom:1rem;line-height:1.25}
+.fc-excerpt{font-size:14px;color:var(--textem);line-height:1.8;margin-bottom:2rem}
+.fc-meta{display:flex;align-items:center;gap:1rem;margin-bottom:2rem}
+.fc-date{font-size:12px;color:var(--textem)}
+.fc-read{font-size:12px;color:var(--textem);background:var(--gris);padding:0.3rem 0.8rem;border-radius:100px}
+.fc-link{display:inline-flex;align-items:center;gap:8px;background:var(--vert);color:#fff;font-weight:600;font-size:14px;padding:0.9rem 1.8rem;border-radius:100px;text-decoration:none;transition:all 0.3s;width:fit-content}
+.fc-link:hover{background:var(--vert2);transform:translateY(-2px)}
+
+/* ARTICLES GRID */
+.articles-section{padding:4rem}
+.articles-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem}
+.articles-count{font-size:13px;color:var(--textem)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.blog-card{background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:20px;overflow:hidden;transition:all 0.3s;cursor:pointer;text-decoration:none;display:block;color:inherit}
+.blog-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,0.08)}
+.blog-top{height:200px;position:relative;overflow:hidden}
+.blog-top img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
+.blog-card:hover .blog-top img{transform:scale(1.06)}
+.blog-top-ov{position:absolute;inset:0;background:rgba(8,32,8,0.3)}
+.blog-cat-tag{position:absolute;top:1rem;left:1rem;background:var(--vert);color:#fff;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:100px}
+.blog-body{padding:1.5rem}
+.blog-title{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:700;color:var(--texte);margin-bottom:0.7rem;line-height:1.35}
+.blog-excerpt{font-size:12px;color:var(--textem);line-height:1.7;margin-bottom:1rem}
+.blog-footer{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;border-top:1px solid rgba(0,0,0,0.06)}
+.blog-date{font-size:11px;color:rgba(90,90,82,0.6)}
+.blog-time{font-size:11px;color:var(--vert);font-weight:600;background:var(--vertl);padding:0.2rem 0.6rem;border-radius:100px}
+
+/* NEWSLETTER */
+.newsletter{padding:5rem 4rem;background:var(--gris)}
+.nl-inner{background:var(--vert);border-radius:28px;padding:4rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.nl-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3.5rem);letter-spacing:2px;color:#fff;line-height:1;margin-bottom:1rem}
+.nl-sub{font-size:15px;color:rgba(255,255,255,0.75);line-height:1.7}
+.nl-form{display:flex;flex-direction:column;gap:1rem}
+.nl-input-row{display:flex;gap:0.8rem}
+.nl-input{flex:1;padding:1rem 1.3rem;border:none;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:14px;outline:none;background:#fff}
+.nl-btn{background:rgba(255,255,255,0.2);color:#fff;font-weight:600;font-size:14px;padding:1rem 1.8rem;border-radius:100px;border:1.5px solid rgba(255,255,255,0.4);cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;transition:all 0.3s}
+.nl-btn:hover{background:#fff;color:var(--vert)}
+.nl-note{font-size:11px;color:rgba(255,255,255,0.5)}
+
+/* CTA */
+.cta-section{padding:6rem 4rem;text-align:center;background:var(--blanc);border-top:1px solid rgba(27,94,32,0.1)}
+.cta-h{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,3rem);font-weight:900;color:var(--texte);line-height:1.15;margin-bottom:1rem}
+.cta-h em{font-style:italic;color:var(--vert)}
+.cta-sub{font-size:14px;color:var(--textem);margin-bottom:2.5rem}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-p{background:var(--vert);color:#fff;font-weight:600;font-size:14px;padding:1rem 2rem;border-radius:100px;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none}
+.btn-p:hover{background:var(--vert2);transform:translateY(-2px);box-shadow:0 12px 32px rgba(27,94,32,0.3)}
+.btn-s{background:transparent;color:var(--vert);font-weight:600;font-size:14px;padding:1rem 2rem;border-radius:100px;border:2px solid var(--vert);cursor:pointer;font-family:'DM Sans',sans-serif;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none}
+.btn-s:hover{background:var(--vertl)}
+
+/* FOOTER */
+footer{padding:3.5rem 4rem 2rem;background:#0A1F0B;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
+.flogo{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:2px;color:#fff}
+.flogo span{color:var(--vert3)}
+.fbrand p{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.7;margin-top:0.8rem;max-width:230px}
+footer h4{font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:1.1rem}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+footer ul a{font-size:13px;color:rgba(255,255,255,0.55);text-decoration:none;transition:all 0.2s;display:inline-block}
+footer ul a:hover{color:var(--vert3);padding-left:5px}
+.fbot{padding:1.2rem 4rem;background:#0A1F0B;border-top:1px solid rgba(255,255,255,0.05);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,0.25)}
+.fbot a{color:var(--vert3);text-decoration:none}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.on{opacity:1;transform:translateY(0)}
+
+/* MOBILE */
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem}
+  .nav-links,.nav-cta{display:none}
+  .nav-burger{display:flex}
+  .blog-hero{padding:7rem 1.5rem 3rem}
+  .featured-section{padding:2.5rem 1.5rem 0}
+  .featured-card{grid-template-columns:1fr;grid-template-rows:280px auto}
+  .fc-img{height:280px}
+  .fc-body{padding:2rem 1.5rem}
+  .articles-section{padding:2.5rem 1.5rem}
+  .blog-grid{grid-template-columns:1fr;gap:1.2rem}
+  .newsletter{padding:3rem 1.5rem}
+  .nl-inner{grid-template-columns:1fr;gap:2rem;padding:2.5rem 1.5rem}
+  .nl-input-row{flex-direction:column}
+  .cta-section{padding:4rem 1.5rem}
+  .cta-btns{flex-direction:column;align-items:center}
+  .btn-p,.btn-s{width:100%;max-width:320px;justify-content:center}
+  footer{grid-template-columns:1fr 1fr;gap:2rem;padding:3rem 1.5rem}
+  .fbrand{grid-column:span 2}
+  .fbot{flex-direction:column;gap:0.5rem;text-align:center;padding:1.2rem 1.5rem}
+}
+@media(max-width:480px){
+  footer{grid-template-columns:1fr}
+  .fbrand{grid-column:span 1}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo"><div class="logo-leaf">🌿</div>NOËL ÉLAGAGE</a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#equipe">Notre équipe</a></li>
+    <li><a href="index.html#flotte">Notre flotte</a></li>
+    <li><a href="zones.html">Zones</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Devis gratuit →</a>
+  <button class="nav-burger" id="burger"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="mobileMenu">
+  <a href="index.html#services">Services</a>
+  <a href="zones.html">Zones</a>
+  <a href="blog.html">Blog</a>
+  <a href="index.html#contact" class="nm-cta">Devis gratuit →</a>
+</div>
+
+<!-- HERO BLOG -->
+<header class="blog-hero">
+  <div class="bh-inner">
+    <div class="bh-eyebrow">Blog & Conseils</div>
+    <h1 class="bh-title">CONSEILS D'<span>EXPERTS</span><br>POUR VOS ARBRES.</h1>
+    <p class="bh-sub">Élagage, abattage, taille de haies — nos experts partagent leurs conseils pour entretenir vos arbres et jardins dans le Rhône, saison après saison.</p>
+    <div class="bh-filters">
+      <button class="filter-btn active" data-filter="all">Tous les articles</button>
+      <button class="filter-btn" data-filter="elagage">Élagage</button>
+      <button class="filter-btn" data-filter="abattage">Abattage</button>
+      <button class="filter-btn" data-filter="haies">Haies</button>
+      <button class="filter-btn" data-filter="entretien">Entretien</button>
+      <button class="filter-btn" data-filter="conseils">Conseils pratiques</button>
+    </div>
+  </div>
+</header>
+
+<!-- ARTICLE À LA UNE -->
+<div class="featured-section reveal">
+  <a href="blog/elagage-arbres-meyzieu.html" class="featured-card">
+    <div class="fc-img">
+      <img src="images/elagage.png" alt="Quand élaguer ses arbres dans le Rhône">
+      <div class="fc-img-ov"></div>
+      <span class="fc-badge">À la une</span>
+    </div>
+    <div class="fc-body">
+      <div class="fc-cat">Élagage · Guide complet</div>
+      <h2 class="fc-title">Quand faut-il élaguer ses arbres dans le Rhône ?</h2>
+      <p class="fc-excerpt">La période d'élagage idéale dépend de l'essence de l'arbre et de la saison. Un élagage mal planifié peut affaiblir durablement votre arbre. Voici le guide complet par saison pour le Rhône.</p>
+      <div class="fc-meta">
+        <span class="fc-date">📅 Juin 2026</span>
+        <span class="fc-read">⏱ 5 min de lecture</span>
+      </div>
+      <span class="fc-link">Lire l'article complet →</span>
+    </div>
+  </a>
+</div>
+
+<!-- TOUS LES ARTICLES -->
+<section class="articles-section">
+  <div class="articles-header">
+    <span class="articles-count">6 articles · mis à jour régulièrement</span>
+  </div>
+  <div class="blog-grid reveal">
+
+    <a href="blog/abattage-arbres-rhone.html" class="blog-card" data-cat="abattage">
+      <div class="blog-top">
+        <img src="images/abattage.png" alt="Abattage d'arbre professionnel Rhône 69">
+        <div class="blog-top-ov"></div>
+        <span class="blog-cat-tag">Abattage</span>
+      </div>
+      <div class="blog-body">
+        <h2 class="blog-title">Abattage d'arbre : quand faire appel à un professionnel ?</h2>
+        <p class="blog-excerpt">Un arbre dangereux, malade ou trop proche d'une construction nécessite l'intervention d'un professionnel certifié. Voici les signes qui ne trompent pas.</p>
+        <div class="blog-footer">
+          <span class="blog-date">Mai 2026</span>
+          <span class="blog-time">4 min</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="blog/entretien-espaces-verts-meyzieu.html" class="blog-card" data-cat="entretien">
+      <div class="blog-top">
+        <img src="images/espace.png" alt="Entretien espaces verts professionnels Meyzieu">
+        <div class="blog-top-ov"></div>
+        <span class="blog-cat-tag">Entretien</span>
+      </div>
+      <div class="blog-body">
+        <h2 class="blog-title">Entretien d'espaces verts : pourquoi déléguer à un pro ?</h2>
+        <p class="blog-excerpt">Syndics, entreprises, communes — l'entretien régulier valorise votre patrimoine et améliore le cadre de vie. Découvrez les avantages d'un contrat d'entretien professionnel.</p>
+        <div class="blog-footer">
+          <span class="blog-date">Avril 2026</span>
+          <span class="blog-time">5 min</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="blog/taille-haies-rhone.html" class="blog-card" data-cat="haies">
+      <div class="blog-top">
+        <img src="images/haies.png" alt="Taille de haies Meyzieu Décines Rhône">
+        <div class="blog-top-ov"></div>
+        <span class="blog-cat-tag">Haies</span>
+      </div>
+      <div class="blog-body">
+        <h2 class="blog-title">Taille de haies : les bonnes périodes et les bons gestes</h2>
+        <p class="blog-excerpt">Haies de thuyas, de lauriers ou de troènes — chaque essence a ses exigences. Guide complet sur les périodes de taille recommandées dans le Rhône.</p>
+        <div class="blog-footer">
+          <span class="blog-date">Mars 2026</span>
+          <span class="blog-time">4 min</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="blog/rognage-souche-rhone.html" class="blog-card" data-cat="conseils">
+      <div class="blog-top">
+        <img src="images/rognage.png" alt="Rognage souche après abattage Rhône 69">
+        <div class="blog-top-ov"></div>
+        <span class="blog-cat-tag">Conseils pratiques</span>
+      </div>
+      <div class="blog-body">
+        <h2 class="blog-title">Rognage de souche : est-ce toujours nécessaire après un abattage ?</h2>
+        <p class="blog-excerpt">Une souche non traitée peut provoquer des rejets gênants ou des dommages sur votre terrain. On vous explique quand le rognage est indispensable.</p>
+        <div class="blog-footer">
+          <span class="blog-date">Février 2026</span>
+          <span class="blog-time">3 min</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="blog/elagage-arbres-fruitiers.html" class="blog-card" data-cat="elagage">
+      <div class="blog-top">
+        <img src="images/elagage.png" alt="Élagage arbres fruitiers Rhône printemps">
+        <div class="blog-top-ov"></div>
+        <span class="blog-cat-tag">Élagage</span>
+      </div>
+      <div class="blog-body">
+        <h2 class="blog-title">Élagage des arbres fruitiers : le guide pour le Rhône</h2>
+        <p class="blog-excerpt">Pommiers, poiriers, cerisiers — la taille des fruitiers est une opération délicate qui conditionne la production de l'année. Toutes nos recommandations.</p>
+        <div class="blog-footer">
+          <span class="blog-date">Janvier 2026</span>
+          <span class="blog-time">6 min</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="blog/broyage-vegetaux-rhone.html" class="blog-card" data-cat="conseils">
+      <div class="blog-top">
+        <img src="images/broyage.png" alt="Broyage végétaux évacuation Rhône 69">
+        <div class="blog-top-ov"></div>
+        <span class="blog-cat-tag">Conseils pratiques</span>
+      </div>
+      <div class="blog-body">
+        <h2 class="blog-title">Broyage de végétaux : valoriser vos déchets de jardin</h2>
+        <p class="blog-excerpt">Après un élagage ou un abattage, les déchets végétaux peuvent être une ressource précieuse. Broyage, paillage, compostage — les meilleures options.</p>
+        <div class="blog-footer">
+          <span class="blog-date">Décembre 2025</span>
+          <span class="blog-time">4 min</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="nl-inner reveal">
+    <div>
+      <div class="nl-title">CONSEILS<br>SAISONNIERS</div>
+      <p class="nl-sub">Recevez nos conseils d'experts au bon moment — élagage hivernal, taille de printemps, entretien estival. Directement dans votre boîte mail.</p>
+    </div>
+    <div class="nl-form">
+      <div class="nl-input-row">
+        <input type="email" class="nl-input" placeholder="Votre adresse email">
+        <button class="nl-btn">S'inscrire →</button>
+      </div>
+      <p class="nl-note">📧 Pas de spam. Uniquement des conseils utiles. Désabonnement en 1 clic.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2 class="cta-h reveal">Un projet d'élagage<br><em>dans le Rhône ?</em></h2>
+  <p class="cta-sub reveal">Devis gratuit · Réponse sous 24h · Certifié & Assuré</p>
+  <div class="cta-btns reveal">
+    <a href="index.html#contact" class="btn-p">Demander un devis gratuit →</a>
+    <a href="tel:0617852687" class="btn-s">📞 06 17 85 26 87</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fbrand"><div class="flogo">NOËL <span>ÉLAGAGE</span></div><p>Spécialistes de l'élagage, taille et abattage d'arbres à Meyzieu et dans tout le Rhône. Intervention rapide, travail soigné, garanti.</p></div>
+  <div><h4>Services</h4><ul>
+    <li><a href="index.html#services">Élagage d'arbres</a></li>
+    <li><a href="index.html#services">Abattage d'arbres</a></li>
+    <li><a href="index.html#services">Rognage de souches</a></li>
+    <li><a href="index.html#services">Taille de haies</a></li>
+    <li><a href="index.html#services">Espaces verts</a></li>
+  </ul></div>
+  <div><h4>Entreprise</h4><ul>
+    <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+    <li><a href="index.html#flotte">Notre flotte</a></li>
+    <li><a href="index.html#avis">Avis clients</a></li>
+    <li><a href="blog.html">Blog & Conseils</a></li>
+    <li><a href="zones.html">Zones d'intervention</a></li>
+  </ul></div>
+  <div><h4>Contact</h4><ul>
+    <li><a href="tel:0617852687">06 17 85 26 87</a></li>
+    <li><a href="mailto:contact@noel-elagage.fr">contact@noel-elagage.fr</a></li>
+    <li><a href="#">94 rue Jean Jaurès, Meyzieu</a></li>
+    <li><a href="index.html#contact">Devis gratuit →</a></li>
+  </ul></div>
+</footer>
+<div class="fbot">
+  <span>© 2026 Noël Élagage · Blog & Conseils · Rhône 69</span>
+  <span>Site réalisé par <a href="#">Sakura Group</a></span>
+</div>
+
+<script>
+const burger=document.getElementById('burger'),menu=document.getElementById('mobileMenu');
+burger.addEventListener('click',()=>{
+  menu.classList.toggle('open');
+  document.body.style.overflow=menu.classList.contains('open')?'hidden':'';
+  const sp=burger.querySelectorAll('span');
+  if(menu.classList.contains('open')){sp[0].style.transform='rotate(45deg) translate(5px,5px)';sp[1].style.opacity='0';sp[2].style.transform='rotate(-45deg) translate(5px,-5px)'}
+  else{sp[0].style.transform='';sp[1].style.opacity='';sp[2].style.transform=''}
+});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  menu.classList.remove('open');
+  document.body.style.overflow='';
+  burger.querySelectorAll('span').forEach(s=>{s.style.transform='';s.style.opacity=''});
+}));
+
+// FILTRES
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    this.classList.add('active');
+    const f=this.dataset.filter;
+    document.querySelectorAll('.blog-card').forEach(card=>{
+      if(f==='all'||card.dataset.cat===f){card.style.display='block'}
+      else{card.style.display='none'}
+    });
+  });
+});
+
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')})},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.querySelectorAll('.blog-card').forEach((el,i)=>{el.style.transitionDelay=i*0.07+'s'});
+</script>
+</body>
+</html>
